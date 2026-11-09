@@ -82,7 +82,7 @@ YD &= Y - T \\
 ```
 Além disso, como vimos antes, à medida que o tempo passa, $T$ aumenta e $G$ é constante, ou seja, o déficit diminui com o tempo, e por conta disso o quanto o estoque aumenta também diminui. A implicação de tudo isso é que, quando o déficit zera, isto é, quando $G = T$, o estoque de dinheiro para de crescer. E o que isso significa?
 
-Significa que a população não á mais guardando dinheiro, e, se não está guardando, está consumindo, ou seja, chega o ponto em que $YD = C$, as famílias passam a consumir toda a sua renda disponível. Nesse ponto, a economia fica nesse "equilíbrio estático", no qual toda a renda disponível é consumida.
+Significa que a população não está mais guardando dinheiro, e, se não está guardando, está consumindo, ou seja, chega o ponto em que $YD = C$, as famílias passam a consumir toda a sua renda disponível. Nesse ponto, a economia fica nesse "equilíbrio estático", no qual toda a renda disponível é consumida.
 
 Outra implicação interessante que podemos observar é como a política fiscal determina o nível da economia. Quando o déficit é zerado, temos:
 
