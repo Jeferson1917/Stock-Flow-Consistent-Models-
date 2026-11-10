@@ -44,3 +44,34 @@ r &= \bar{r}
 | $\lambda_1$ | Quanto os juros aumentam a preferência por títulos |
 | $\lambda_2$ | Quanto a renda disponível reduz a preferência por títulos |
 | $X_{t-1}$ | Valor da variável $X$ no período anterior |
+
+Além disso, existe uma equação que é verdadeira em todos os períodos:
+
+```math
+H_s = H_h
+```
+
+Isso porque o dinheiro emitido pelo banco central é utilizado para comprar os títulos remanescentes da dívida pública, e, se são remanescentes, é porque as famílias optaram por não os comprar. Isto é, temos a renda disponível delas, $YD = Y - T + r_{t-1} \cdot B_{h,t-1}$, e esse valor tem três destinos: o consumo, a variação do dinheiro guardado e a variação dos títulos. Logo:
+
+```math
+YD = C + \Delta H_h + \Delta B_h
+```
+
+Porém, sabemos que houve títulos emitidos pelo governo para cobrir o seu déficit, e que a dívida nova é igual à poupança das famílias (herdando os conceitos já discutidos no modelo SIM). Os títulos que as famílias não compraram ficam com o banco central, que emite exatamente esse valor em dinheiro para comprá-los:
+
+```math
+\begin{aligned}
+\Delta B_s &= YD - C \quad \text{(dívida nova igual à poupança das famílias)} \\
+\Delta B_{cb} &= \Delta B_s - \Delta B_h \quad \text{(o banco central compra o que sobrou)} \\
+\Delta H_s &= \Delta B_{cb} \quad \text{(e emite o valor que comprou)} \\
+\Rightarrow \Delta H_s &= YD - C - \Delta B_h
+\end{aligned}
+```
+
+E, da equação da renda disponível, $YD - C - \Delta B_h = \Delta H_h$. Portanto:
+
+```math
+\Delta H_s = \Delta H_h
+```
+
+Ou seja, a cada período, o dinheiro novo emitido pelo banco central é exatamente igual ao dinheiro novo guardado pelas famílias. Como os dois começam em zero, temos $H_s = H_h$ em todos os períodos. Essa igualdade não é imposta ao modelo: ela é consequência das outras equações, e por isso serve como verificação. Se ela não fechar, alguma das equações está errada.
