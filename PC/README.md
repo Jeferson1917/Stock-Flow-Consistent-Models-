@@ -15,7 +15,7 @@ C &= \alpha_1 \cdot YD + \alpha_2 \cdot V_{t-1} \\
 V &= V_{t-1} + (YD - C) \\
 B_{h} &= V \cdot (\lambda_0 + \lambda_1 \cdot r) - \lambda_2 \cdot YD \\
 H_{h} &= V - B_{h} \\
-B_{s} &= B_{s, t-1} + (G + r_{t-1} \cdot B_{h, t-1}) - (T + r_{t-1} \cdot B_{cb,t-1}) \\
+B_{s} &= B_{s,t-1} + (G + r_{t-1} \cdot B_{s,t-1}) - (T + r_{t-1} \cdot B_{cb,t-1}) \\ 
 B_{cb} &= B_{s} - B_{h} \\
 H_{s} &= H_{s,t-1} + (B_{cb} - B_{cb, t-1}) \\
 r &= \bar{r}
@@ -75,3 +75,21 @@ E, da equação da renda disponível, $YD - C - \Delta B_h = \Delta H_h$. Portan
 ```
 
 Ou seja, a cada período, o dinheiro novo emitido pelo banco central é exatamente igual ao dinheiro novo guardado pelas famílias. Como os dois começam em zero, temos $H_s = H_h$ em todos os períodos. Essa igualdade não é imposta ao modelo: ela é consequência das outras equações, e por isso serve como verificação. Se ela não fechar, alguma das equações está errada.
+
+Agora, tal qual fizemos no SIM, é preciso colocar Y em função dos parâmetreos que são dados inicialmente no modelo:
+
+```math
+\begin{aligned}
+Y &= C + G \\
+&= \alpha_1 \cdot YD + \alpha_2 \cdot V_{t-1} + G\\
+&= \alpha_1 \cdot ((Y - T + (r_{t-1} \cdot B_{h,t-1}))) + \alpha_2 \cdot V_{t-1} + G \\
+&= \alpha_1 \cdot (Y - (\theta(Y + r_{t-1} \cdot B_{h,t-1})) + (r_{t-1} \cdot B_{h,t-1})) + \alpha_2 \cdot V_{t-1} + G  \\
+&= \alpha_1 \cdot (Y - ((\theta \cdot Y) + (\theta \cdot r_{t-1} \cdot B_{h,t-1})) + (r_{t-1} \cdot B_{h,t-1})) + \alpha_2 \cdot V_{t-1} + G \\
+&= \alpha_1 \cdot Y - \alpha_1 \cdot \theta \cdot Y - \alpha_1 \cdot \theta \cdot r_{t-1} \cdot B_{h,t-1} + \alpha_1 \cdot r_{t-1} \cdot B_{h,t-1} + \alpha_2 \cdot V_{t-1} + G \\
+&= Y \cdot (\alpha_1 - \alpha1 \cdot \theta) - \alpha_1 \cdot \theta \cdot r_{t-1} \cdot B_{h,t-1} + \alpha_1 \cdot r_{t-1} \cdot B_{h,t-1} + \alpha_2 \cdot V_{t-1} + G \\
+Y - Y \cdot (\alpha_1 - \alpha1 \cdot \theta) &= -\alpha_1 \cdot \theta \cdot r_{t-1} \cdot B_{h,t-1} + \alpha_1 \cdot r_{t-1} \cdot B_{h,t-1} + \alpha_2 \cdot V_{t-1} + G \\
+Y \cdot (1 -\cdot (\alpha_1 - \alpha1 \cdot \theta))  &= -\alpha_1 \cdot \theta \cdot r_{t-1} \cdot B_{h,t-1} + \alpha_1 \cdot r_{t-1} \cdot B_{h,t-1} + \alpha_2 \cdot V_{t-1} + G \\ 
+Y &= \frac{-\alpha_1 \cdot \theta \cdot r_{t-1} \cdot B_{h,t-1} + \alpha_1 \cdot r_{t-1} \cdot B_{h,t-1} + \alpha_2 \cdot V_{t-1} + G }{(1 -\cdot (\alpha_1 - \alpha1 \cdot \theta))} \\
+Y &= \frac{\alpha_1 \cdot (1 - \theta) \cdot r_{t-1} \cdot B_{h,t-1} + \alpha_2 \cdot V_{t-1} + G}{1 - \alpha_1 \cdot (1 - \theta)}
+\end{aligned}
+```
