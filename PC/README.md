@@ -154,7 +154,7 @@ Ou seja, os juros pagos pelo governo funcionam como um gasto que passa pelas fam
 
 A sexta implicação é sobre o dinheiro: o banco central não o emite a seu bel-prazer. Ele escolhe a taxa de juros e compra todos os títulos que as famílias não querem; portanto, a emissão de moeda depende da vontade da população de comprar títulos ou guardar dinheiro. É o que os pós-keynesianos definem como moeda endógena, em oposição à visão em que o banco central controla diretamente a quantidade de dinheiro e os juros se ajustam.
 
-A sétima implicação é que as famílias podem reorganizar a riqueza sem poupar nada. No primeiro período depois do aumento dos juros, a riqueza praticamente não muda(porque pra calculos de imposto e etc ela utilzia $(r_(h,t-1))$, mas as famílias trocam dinheiro por títulos, porque os títulos passaram a render mais:
+A sétima implicação é que as famílias podem reorganizar a riqueza sem poupar nada. No primeiro período depois do aumento dos juros, a riqueza praticamente não muda(porque pra calculos de imposto e etc ela utiliza $(r_(h,t-1))$, mas as famílias trocam dinheiro por títulos, porque os títulos passaram a render mais:
 
 | | Antes do aumento | Primeiro período depois |
 | --- | --- | --- |
